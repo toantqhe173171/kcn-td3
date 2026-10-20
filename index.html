@@ -603,6 +603,7 @@
       text-decoration: none;
       transition: all 0.3s;
       box-shadow: 0 6px 24px rgba(245, 158, 11, 0.35);
+      white-space: nowrap;
     }
 
     .btn-gold:hover {
@@ -626,6 +627,7 @@
       text-decoration: none;
       transition: all 0.3s;
       box-shadow: 0 6px 24px rgba(10, 25, 47, 0.25);
+      white-space: nowrap;
     }
 
     .btn-navy:hover {
@@ -648,6 +650,7 @@
       background: transparent;
       text-decoration: none;
       transition: all 0.3s;
+      white-space: nowrap;
     }
 
     .btn-outline-gold:hover {
@@ -735,40 +738,130 @@
   <!-- ============================================================ -->
   <!--  STICKY HEADER                                               -->
   <!-- ============================================================ -->
-  <header id="site-header" class="py-3 px-4">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
+  <!-- ============================================================ -->
+  <!--  STICKY HEADER                                               -->
+  <!-- ============================================================ -->
+  <header id="site-header" class="py-2.5 sm:py-3 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-4 lg:gap-6">
       <!-- Logo -->
-      <a href="#hero" class="flex items-center gap-3 flex-shrink-0">
+      <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group">
         <img src="logo/Gemini_Generated_Image_lbi08olbi08olbi0.png" alt="Logo Đất Nền Ven KCN Tràng Duệ 3"
-          class="h-12 w-12 rounded-xl object-cover shadow-md flex-shrink-0" style="object-position:center 35%" />
-        <div>
-          <div class="text-blue-950 font-black text-sm sm:text-base leading-tight tracking-tight">Đất Nền Ven KCN Tràng
-            Duệ 3</div>
-          <div class="text-yellow-600 text-xs font-semibold tracking-wide uppercase">An Lão · Hải Phòng</div>
+          class="h-10 w-10 sm:h-11 sm:w-11 rounded-xl object-cover shadow-sm group-hover:scale-105 transition-transform flex-shrink-0"
+          style="object-position:center 35%" />
+        <div class="flex flex-col justify-center">
+          <div class="text-blue-950 font-black text-sm sm:text-base leading-tight tracking-tight whitespace-nowrap">Đất
+            Nền Ven KCN Tràng Duệ 3</div>
+          <div class="text-yellow-600 text-[11px] sm:text-xs font-semibold tracking-wider uppercase">An Lão · Hải Phòng
+          </div>
         </div>
       </a>
+
       <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-5 text-sm font-semibold text-slate-600">
-        <a href="#vi-tri" class="hover:text-amber-600 transition-colors">1. Vị Trí</a>
-        <a href="#mat-bang" class="hover:text-amber-600 transition-colors">2. Mặt Bằng</a>
-        <a href="#phap-ly" class="hover:text-amber-600 transition-colors">3. Pháp Lý</a>
-        <a href="#quy-hoach" class="hover:text-amber-600 transition-colors">4. Quy Hoạch KCN</a>
-        <a href="#tien-do" class="hover:text-amber-600 transition-colors">5. Tiến Độ San Lấp</a>
-        <a href="#thuc-te-gia-dat" class="hover:text-amber-600 transition-colors">6. Thực Tế Giá Đất</a>
-        <a href="tel:0832208645" class="flex items-center gap-1.5 font-bold text-amber-700 hover:text-amber-800 transition-colors">
+      <nav
+        class="hidden lg:flex items-center gap-3.5 xl:gap-5 2xl:gap-6 text-xs xl:text-sm font-semibold text-slate-700 whitespace-nowrap flex-shrink-0">
+        <a href="#vi-tri" class="hover:text-amber-600 transition-colors py-1">1. Vị Trí</a>
+        <a href="#mat-bang" class="hover:text-amber-600 transition-colors py-1">2. Mặt Bằng</a>
+        <a href="#phap-ly" class="hover:text-amber-600 transition-colors py-1">3. Pháp Lý</a>
+        <a href="#quy-hoach" class="hover:text-amber-600 transition-colors py-1">4. Quy Hoạch<span
+            class="hidden 2xl:inline"> KCN</span></a>
+        <a href="#tien-do" class="hover:text-amber-600 transition-colors py-1">5. Tiến Độ<span
+            class="hidden 2xl:inline"> San Lấp</span></a>
+        <a href="#thuc-te-gia-dat" class="hover:text-amber-600 transition-colors py-1">6. Giá Đất<span
+            class="hidden 2xl:inline"> Thực Tế</span></a>
+
+        <div class="h-4 w-px bg-slate-200 hidden xl:block"></div>
+
+        <!-- Desktop Hotline -->
+        <a href="tel:0832208645"
+          class="hidden xl:flex items-center gap-1.5 font-bold text-amber-700 hover:text-amber-800 transition-colors">
           <i data-lucide="phone" class="w-4 h-4 text-amber-600"></i>
           <span>083.220.8645</span>
         </a>
-        <a href="#contact-form" class="btn-gold text-sm px-5 py-2.5">Đăng Ký Ngay</a>
+
+        <!-- Desktop CTA -->
+        <a href="#contact-form"
+          class="btn-gold text-xs xl:text-sm px-4 xl:px-5 py-2 xl:py-2.5 whitespace-nowrap shadow-sm">Đăng Ký Ngay</a>
       </nav>
-      <!-- Mobile Hotline -->
-      <a href="tel:0832208645" class="lg:hidden flex items-center gap-2 font-bold text-sm px-4 py-2 rounded-full"
-        style="background:#f59e0b;color:#0a192f">
-        <i data-lucide="phone" class="w-4 h-4"></i>
-        <span>083.220.8645</span>
-      </a>
+
+      <!-- Mobile & Tablet Actions (< lg) -->
+      <div class="flex lg:hidden items-center gap-2">
+        <a href="tel:0832208645"
+          class="flex items-center gap-1.5 font-bold text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-full shadow-sm whitespace-nowrap"
+          style="background:#f59e0b;color:#0a192f">
+          <i data-lucide="phone" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+          <span>083.220.8645</span>
+        </a>
+        <button id="mobile-menu-toggle" type="button" aria-label="Mở menu"
+          class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 flex items-center justify-center transition-colors">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer"
+    class="fixed inset-0 z-[1050] bg-slate-950/60 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none lg:hidden">
+    <div id="mobile-drawer-panel"
+      class="absolute top-0 right-0 w-[280px] sm:w-[320px] h-full bg-white shadow-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
+          <div class="flex items-center gap-2">
+            <img src="logo/Gemini_Generated_Image_lbi08olbi08olbi0.png" alt="Logo"
+              class="h-8 w-8 rounded-lg object-cover" />
+            <span class="font-bold text-blue-950 text-sm">KCN Tràng Duệ 3</span>
+          </div>
+          <button id="mobile-drawer-close" type="button" aria-label="Đóng menu"
+            class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 flex items-center justify-center">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <nav class="flex flex-col gap-1 font-medium text-slate-700">
+          <a href="#vi-tri"
+            class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-700 flex items-center justify-between transition-colors">
+            <span>1. Vị Trí</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="#mat-bang"
+            class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-700 flex items-center justify-between transition-colors">
+            <span>2. Mặt Bằng</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="#phap-ly"
+            class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-700 flex items-center justify-between transition-colors">
+            <span>3. Pháp Lý</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="#quy-hoach"
+            class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-700 flex items-center justify-between transition-colors">
+            <span>4. Quy Hoạch KCN</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="#tien-do"
+            class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-700 flex items-center justify-between transition-colors">
+            <span>5. Tiến Độ San Lấp</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="#thuc-te-gia-dat"
+            class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-700 flex items-center justify-between transition-colors">
+            <span>6. Thực Tế Giá Đất</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-slate-100 flex flex-col gap-3">
+        <a href="tel:0832208645"
+          class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-900 text-white font-bold text-sm">
+          <i data-lucide="phone" class="w-4 h-4 text-amber-400"></i>
+          <span>083.220.8645</span>
+        </a>
+        <a href="#contact-form" class="mobile-nav-link btn-gold text-center py-3 text-sm justify-center">Đăng Ký Nhận
+          Bảng Giá</a>
+      </div>
+    </div>
+  </div>
 
 
   <!-- ============================================================ -->
@@ -1455,7 +1548,7 @@
         <h2 class="text-3xl sm:text-4xl font-black text-blue-950 mb-3">TIẾN ĐỘ SAN LẤP THỰC TẾ 2026</h2>
         <div class="gold-line mx-auto mb-4"></div>
         <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">
-          Đại công trường 687 Ha <strong class="text-amber-700 font-bold">đang đẩy mạnh san lấp 24/7</strong> với hàng
+          Đại công trường 652 Ha <strong class="text-amber-700 font-bold">đang đẩy mạnh san lấp 24/7</strong> với hàng
           trăm đầu xe cơ giới – Bằng chứng tiến độ không thể chối cãi!
         </p>
       </div>
@@ -1538,7 +1631,7 @@
               <div>
                 <div class="text-blue-950 font-bold text-sm mb-1">San lấp mặt bằng đang đẩy nhanh</div>
                 <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Hàng trăm xe tải thi công liên tục 24/7,
-                  toàn bộ 687 ha đang được san lấp đồng bộ theo tiến độ cam kết.</p>
+                  toàn bộ 652 ha đang được san lấp đồng bộ theo tiến độ cam kết.</p>
               </div>
             </div>
             <div class="flex gap-4">
@@ -1652,7 +1745,7 @@
                 <div class="font-black text-amber-900 text-sm flex items-center gap-2">
                   <i data-lucide="star" class="w-4 h-4 text-amber-600 fill-amber-500"></i>KCN TRÀNG DUỆ 3 (Hiện tại)
                 </div>
-                <div class="text-amber-800 text-xs mt-0.5 font-medium">An Lão, Hải Phòng · 687 ha</div>
+                <div class="text-amber-800 text-xs mt-0.5 font-medium">An Lão, Hải Phòng · 652 ha</div>
               </td>
               <td class="px-6 py-5 text-center text-amber-900 text-sm font-bold">2025 – 2026 ← BẠN ĐANG Ở ĐÂY</td>
               <td class="px-6 py-5 text-center"><span
@@ -2022,6 +2115,7 @@
       updateROI();
       initScrollReveal();
       initHeaderScroll();
+      initMobileMenu();
       updateSliderProgress('capital-slider');
       updateSliderProgress('time-slider');
     });
@@ -2032,6 +2126,42 @@
       window.addEventListener('scroll', () => {
         header.classList.toggle('scrolled', window.scrollY > 60);
       }, { passive: true });
+    }
+
+    // ===== MOBILE DRAWER MENU =====
+    function initMobileMenu() {
+      const toggle = document.getElementById('mobile-menu-toggle');
+      const closeBtn = document.getElementById('mobile-drawer-close');
+      const drawer = document.getElementById('mobile-drawer');
+      const panel = document.getElementById('mobile-drawer-panel');
+      const links = document.querySelectorAll('.mobile-nav-link');
+
+      if (!toggle || !drawer || !panel) return;
+
+      function openDrawer() {
+        drawer.classList.remove('opacity-0', 'pointer-events-none');
+        drawer.classList.add('opacity-100');
+        panel.classList.remove('translate-x-full');
+        panel.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        drawer.classList.add('opacity-0', 'pointer-events-none');
+        drawer.classList.remove('opacity-100');
+        panel.classList.add('translate-x-full');
+        panel.classList.remove('translate-x-0');
+        document.body.style.overflow = '';
+      }
+
+      toggle.addEventListener('click', openDrawer);
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      drawer.addEventListener('click', (e) => {
+        if (e.target === drawer) closeDrawer();
+      });
+      links.forEach(link => {
+        link.addEventListener('click', closeDrawer);
+      });
     }
 
     // ===== SCROLL REVEAL =====
