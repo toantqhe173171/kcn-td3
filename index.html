@@ -1554,59 +1554,84 @@
 
           <!-- 16:9 Video Player -->
           <div class="video-wrapper shadow-2xl" style="aspect-ratio:16/9; position:relative;">
-            <video id="main-video" src="video/xe tải san lấp.mp4" autoplay muted loop playsinline
+            <video id="main-video" src="video/xe-tai-san-lap.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"
+              poster="photos/z7969804608772_0920bfcc11d7a284ec9aa331949c0b03.jpg"
               style="width:100%; height:100%; object-fit:cover; display:block;">
+              <source src="video/xe-tai-san-lap.mp4" type="video/mp4" />
               Trình duyệt của bạn không hỗ trợ phát video.
             </video>
+
+            <!-- Big Center Play Button (Hiển thị khi video dừng hoặc khi mobile chặn tự động phát) -->
+            <button id="video-play-btn" type="button" aria-label="Phát video tiến độ"
+              class="absolute inset-0 m-auto w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-amber-500/90 hover:bg-amber-500 text-slate-950 flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 z-20 cursor-pointer border-2 border-white/90">
+              <i data-lucide="play" class="w-8 h-8 sm:w-10 sm:h-10 fill-current translate-x-0.5"></i>
+            </button>
+
             <div
               style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,rgba(2,12,27,0.7),transparent);pointer-events:none;">
             </div>
-            <div class="video-controls">
-              <button id="mute-btn" class="vid-btn" title="Bật/Tắt âm thanh" onclick="toggleMute()">
+            <div class="video-controls z-30">
+              <button id="mute-btn" class="vid-btn" title="Bật/Tắt âm thanh" onclick="toggleMute(event)">
                 <i data-lucide="volume-x" class="w-4 h-4" id="mute-icon"></i>
               </button>
-              <button class="vid-btn" title="Xem toàn màn hình" onclick="openVideoModal()">
+              <button class="vid-btn" title="Xem toàn màn hình" onclick="openVideoModal(event)">
                 <i data-lucide="maximize" class="w-4 h-4"></i>
               </button>
             </div>
           </div>
 
-          <!-- Video & Photo Selector Thumbnails từ thư mục thực tế -->
-          <div class="mt-4 grid grid-cols-3 gap-3">
-            <div
-              class="video-thumb-wrapper cursor-pointer rounded-xl overflow-hidden border-2 hover:border-amber-500 transition-all group bg-white shadow-sm"
-              style="border-color:#e2e8f0" onclick="switchVideo('video/flycam lô đất.mp4', this)">
-              <video src="video/flycam lô đất.mp4" muted preload="metadata"
-                class="w-full object-cover group-hover:scale-105 transition-transform duration-300" style="height:86px"
-                playsinline></video>
-              <div class="px-2.5 py-1.5 text-[11px] font-bold flex items-center gap-1 bg-slate-900 text-amber-400">
-                <i data-lucide="play" class="w-3 h-3"></i> Flycam Lô Đất
+          <!-- Video Selector Thumbnails (Tối ưu tốc độ tải 100% trên điện thoại) -->
+          <div class="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
+            <button type="button"
+              class="video-thumb-wrapper cursor-pointer rounded-xl overflow-hidden border-2 border-amber-500 ring-2 ring-amber-400/50 transition-all group bg-white shadow-sm p-0 text-left focus:outline-none"
+              onclick="switchVideo('video/xe-tai-san-lap.mp4', this)">
+              <div class="relative bg-slate-900 h-16 sm:h-20 overflow-hidden flex items-center justify-center">
+                <img src="photos/z7969804608772_0920bfcc11d7a284ec9aa331949c0b03.jpg" alt="Xe San Lấp" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition-transform duration-300" />
+                <div class="absolute inset-0 bg-slate-950/30 flex items-center justify-center">
+                  <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-amber-500/90 text-slate-950 flex items-center justify-center shadow">
+                    <i data-lucide="play" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current translate-x-0.5"></i>
+                  </div>
+                </div>
               </div>
-            </div>
+              <div class="px-1.5 sm:px-2 py-1.5 text-[10px] sm:text-xs font-bold flex items-center justify-center gap-1 bg-slate-900 text-amber-400 text-center whitespace-nowrap">
+                <span>Xe San Lấp 24/7</span>
+              </div>
+            </button>
 
-            <div
-              class="video-thumb-wrapper cursor-pointer rounded-xl overflow-hidden border-2 hover:border-amber-500 transition-all group bg-white shadow-sm"
-              style="border-color:#e2e8f0" onclick="switchVideo('video/1JRRO5L53_7VG3HP.mp4', this)">
-              <video src="video/1JRRO5L53_7VG3HP.mp4" muted preload="metadata"
-                class="w-full object-cover group-hover:scale-105 transition-transform duration-300" style="height:86px"
-                playsinline></video>
-              <div class="px-2.5 py-1.5 text-[11px] font-bold flex items-center gap-1 bg-slate-900 text-amber-400">
-                <i data-lucide="play" class="w-3 h-3"></i> Toàn Cảnh
+            <button type="button"
+              class="video-thumb-wrapper cursor-pointer rounded-xl overflow-hidden border-2 border-slate-200 hover:border-amber-500 transition-all group bg-white shadow-sm p-0 text-left focus:outline-none"
+              onclick="switchVideo('video/flycam-lo-dat.mp4', this)">
+              <div class="relative bg-slate-900 h-16 sm:h-20 overflow-hidden flex items-center justify-center">
+                <img src="logo/Gemini_Generated_Image_lbi08olbi08olbi0.png" alt="Flycam Lô Đất" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition-transform duration-300" />
+                <div class="absolute inset-0 bg-slate-950/30 flex items-center justify-center">
+                  <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/90 text-slate-900 flex items-center justify-center shadow">
+                    <i data-lucide="play" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current translate-x-0.5"></i>
+                  </div>
+                </div>
               </div>
-            </div>
+              <div class="px-1.5 sm:px-2 py-1.5 text-[10px] sm:text-xs font-bold flex items-center justify-center gap-1 bg-slate-900 text-slate-200 group-hover:text-amber-400 text-center whitespace-nowrap">
+                <span>Flycam Lô Đất</span>
+              </div>
+            </button>
 
-            <div
-              class="video-thumb-wrapper cursor-pointer rounded-xl overflow-hidden border-2 hover:border-amber-500 transition-all group bg-white shadow-sm"
-              style="border-color:#e2e8f0" onclick="switchVideo('video/xe tải san lấp.mp4', this)">
-              <video src="video/xe tải san lấp.mp4" muted preload="metadata"
-                class="w-full object-cover group-hover:scale-105 transition-transform duration-300" style="height:86px"
-                playsinline></video>
-              <div class="px-2.5 py-1.5 text-[11px] font-bold flex items-center gap-1 bg-slate-900 text-amber-400">
-                <i data-lucide="play" class="w-3 h-3"></i> Xe San Lấp 24/7
+            <button type="button"
+              class="video-thumb-wrapper cursor-pointer rounded-xl overflow-hidden border-2 border-slate-200 hover:border-amber-500 transition-all group bg-white shadow-sm p-0 text-left focus:outline-none"
+              onclick="switchVideo('video/1JRRO5L53_7VG3HP.mp4', this)">
+              <div class="relative bg-slate-900 h-16 sm:h-20 overflow-hidden flex items-center justify-center">
+                <img src="photos/mặt bằng.jpg" alt="Toàn Cảnh KCN" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition-transform duration-300" />
+                <div class="absolute inset-0 bg-slate-950/30 flex items-center justify-center">
+                  <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/90 text-slate-900 flex items-center justify-center shadow">
+                    <i data-lucide="play" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current translate-x-0.5"></i>
+                  </div>
+                </div>
               </div>
-            </div>
+              <div class="px-1.5 sm:px-2 py-1.5 text-[10px] sm:text-xs font-bold flex items-center justify-center gap-1 bg-slate-900 text-slate-200 group-hover:text-amber-400 text-center whitespace-nowrap">
+                <span>Toàn Cảnh KCN</span>
+              </div>
+            </button>
           </div>
         </div>
+
 
         <!-- Info Column -->
         <div class="lg:col-span-2 reveal bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-md">
@@ -2027,7 +2052,7 @@
       <i data-lucide="x" class="w-5 h-5"></i>
     </button>
     <video id="modal-video" controls muted loop playsinline>
-      <source src="video/xe tải san lấp.mp4" type="video/mp4" />
+      <source src="video/xe-tai-san-lap.mp4" type="video/mp4" />
     </video>
   </div>
 
@@ -2143,6 +2168,7 @@
       initScrollReveal();
       initHeaderScroll();
       initMobileMenu();
+      initMainVideo();
       updateSliderProgress('capital-slider');
       updateSliderProgress('time-slider');
     });
@@ -2204,38 +2230,141 @@
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     }
 
-    // ===== VIDEO CONTROLS =====
+    // ===== VIDEO CONTROLS (Tối ưu cho cả Mobile & Desktop) =====
     let isMuted = true;
-    function toggleMute() {
+
+    function toggleMute(e) {
+      if (e) e.stopPropagation();
       const v = document.getElementById('main-video');
+      if (!v) return;
       isMuted = !isMuted;
       v.muted = isMuted;
       const icon = document.getElementById('mute-icon');
-      icon.setAttribute('data-lucide', isMuted ? 'volume-x' : 'volume-2');
-      lucide.createIcons();
+      if (icon) {
+        icon.setAttribute('data-lucide', isMuted ? 'volume-x' : 'volume-2');
+        lucide.createIcons();
+      }
     }
 
-    function openVideoModal() {
+    function openVideoModal(e) {
+      if (e) e.stopPropagation();
       const m = document.getElementById('video-modal');
       const mv = document.getElementById('modal-video');
-      const src = document.getElementById('main-video').src;
-      mv.querySelector('source').src = src;
-      mv.load(); mv.play();
+      const mainVid = document.getElementById('main-video');
+      if (!m || !mv || !mainVid) return;
+      const src = mainVid.currentSrc || mainVid.src;
+      const sourceEl = mv.querySelector('source');
+      if (sourceEl) sourceEl.src = src;
+      mv.src = src;
+      mv.load();
+      const p = mv.play();
+      if (p) p.catch(() => {});
       m.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
 
     function closeVideoModal() {
-      document.getElementById('modal-video').pause();
-      document.getElementById('video-modal').classList.remove('active');
+      const mv = document.getElementById('modal-video');
+      if (mv) mv.pause();
+      const m = document.getElementById('video-modal');
+      if (m) m.classList.remove('active');
       document.body.style.overflow = '';
     }
 
     function switchVideo(src, el) {
       const v = document.getElementById('main-video');
-      v.src = src; v.load(); v.play();
-      document.querySelectorAll('.video-thumb-wrapper').forEach(t => t.style.borderColor = 'rgba(245,158,11,0.4)');
-      el.style.borderColor = '#f59e0b';
+      if (!v) return;
+      v.pause();
+      v.src = src;
+      const sourceEl = v.querySelector('source');
+      if (sourceEl) sourceEl.src = src;
+      v.load();
+      const p = v.play();
+      if (p) {
+        p.catch(() => {
+          // Autoplay bị chặn bởi chế độ tiết kiệm pin trên điện thoại
+          updatePlayBtnState(false);
+        });
+      }
+      document.querySelectorAll('.video-thumb-wrapper').forEach(t => {
+        t.classList.remove('border-amber-500', 'ring-2', 'ring-amber-400/50');
+        t.classList.add('border-slate-200');
+        const text = t.querySelector('span');
+        if (text) {
+          text.parentElement.classList.remove('text-amber-400');
+          text.parentElement.classList.add('text-slate-200');
+        }
+      });
+      if (el) {
+        el.classList.remove('border-slate-200');
+        el.classList.add('border-amber-500', 'ring-2', 'ring-amber-400/50');
+        const text = el.querySelector('span');
+        if (text) {
+          text.parentElement.classList.remove('text-slate-200');
+          text.parentElement.classList.add('text-amber-400');
+        }
+      }
+    }
+
+    function updatePlayBtnState(isPlaying) {
+      const btn = document.getElementById('video-play-btn');
+      if (!btn) return;
+      btn.style.display = isPlaying ? 'none' : 'flex';
+    }
+
+    function initMainVideo() {
+      const v = document.getElementById('main-video');
+      const btn = document.getElementById('video-play-btn');
+      if (!v) return;
+
+      v.muted = true; // Bắt buộc muted để được phát trên mobile
+      v.setAttribute('playsinline', '');
+      v.setAttribute('webkit-playsinline', '');
+
+      function checkPlayState() {
+        updatePlayBtnState(!v.paused);
+      }
+
+      v.addEventListener('play', () => updatePlayBtnState(true));
+      v.addEventListener('pause', () => updatePlayBtnState(false));
+      v.addEventListener('ended', () => updatePlayBtnState(false));
+
+      // Thử autoplay khi load trang
+      const playPromise = v.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          updatePlayBtnState(true);
+        }).catch(() => {
+          // Trình duyệt mobile chặn autoplay (tiết kiệm pin, chặn video)
+          updatePlayBtnState(false);
+        });
+      } else {
+        checkPlayState();
+      }
+
+      function handleVideoToggle() {
+        if (v.paused) {
+          const p = v.play();
+          if (p) p.catch(() => updatePlayBtnState(false));
+        } else {
+          v.pause();
+        }
+      }
+
+      if (btn) {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          handleVideoToggle();
+        });
+      }
+
+      const wrapper = document.querySelector('.video-wrapper');
+      if (wrapper) {
+        wrapper.addEventListener('click', (e) => {
+          if (e.target.closest('.video-controls')) return;
+          handleVideoToggle();
+        });
+      }
     }
 
     // ===== LIGHTBOX =====
