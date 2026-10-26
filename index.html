@@ -1705,14 +1705,8 @@
         </p>
       </div>
 
-      <!-- Hint vuốt ngang cho điện thoại -->
-      <div class="lg:hidden text-center text-xs text-amber-800 font-semibold mb-3 flex items-center justify-center gap-1.5 bg-amber-50 py-1.5 px-3.5 rounded-full border border-amber-200 w-fit mx-auto shadow-sm">
-        <i data-lucide="chevrons-left-right" class="w-4 h-4 text-amber-600"></i>
-        <span>Vuốt ngang bảng để xem so sánh chi tiết</span>
-      </div>
-
-      <!-- Bảng so sánh thực tế giá đất -->
-      <div class="overflow-x-auto reveal mb-10 sm:mb-12 shadow-xl rounded-2xl border border-slate-200">
+      <!-- ===== DESKTOP: Bảng ngang (lg trở lên) ===== -->
+      <div class="hidden lg:block overflow-x-auto reveal mb-10 sm:mb-12 shadow-xl rounded-2xl border border-slate-200">
         <table class="w-full border-collapse rounded-2xl overflow-hidden price-table bg-white">
           <thead>
             <tr style="background:linear-gradient(90deg,#0a192f,#1a3a5c);color:#ffffff" class="whitespace-nowrap">
@@ -1728,7 +1722,7 @@
             <!-- 1. Tràng Duệ 1 & 2 -->
             <tr class="compare-row border-b border-slate-100 hover:bg-slate-50 transition-colors whitespace-nowrap">
               <td class="px-5 py-4 sm:px-6 sm:py-5">
-                <div class="font-bold text-slate-900 text-sm">KCN Tràng Duệ 1 &amp; 2</div>
+                <div class="font-bold text-slate-900 text-sm">KCN Tràng Duệ 1 & 2</div>
                 <div class="text-slate-500 text-xs mt-0.5">An Dương, Hải Phòng · Tổ hợp LG</div>
               </td>
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center text-slate-600 text-sm">2013 – 2015</td>
@@ -1736,29 +1730,23 @@
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center text-slate-600 text-sm">2020 – 2024</td>
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center"><span class="font-black text-amber-600 text-base">45 – 75 tr/m²</span></td>
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center">
-                <span
-                  class="inline-flex items-center gap-1 font-black px-3 py-1 rounded-full text-xs sm:text-sm bg-emerald-50 text-emerald-700 border border-emerald-200">▲
-                  10–15 lần</span>
+                <span class="inline-flex items-center gap-1 font-black px-3 py-1 rounded-full text-xs sm:text-sm bg-emerald-50 text-emerald-700 border border-emerald-200">▲ 10–15 lần</span>
               </td>
             </tr>
-
             <!-- 2. VSIP Hải Phòng -->
             <tr class="compare-row border-b border-slate-100 hover:bg-slate-50 transition-colors bg-slate-50/50 whitespace-nowrap">
               <td class="px-5 py-4 sm:px-6 sm:py-5">
                 <div class="font-bold text-slate-900 text-sm">KCN VSIP Hải Phòng</div>
-                <div class="text-slate-500 text-xs mt-0.5">Thủy Nguyên, Hải Phòng · Đô thị &amp; CN 1.600 ha</div>
+                <div class="text-slate-500 text-xs mt-0.5">Thủy Nguyên, Hải Phòng · Đô thị & CN 1.600 ha</div>
               </td>
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center text-slate-600 text-sm">2010 – 2013</td>
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center"><span class="font-bold text-slate-800">2.5 – 5 tr/m²</span></td>
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center text-slate-600 text-sm">2018 – 2023</td>
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center"><span class="font-black text-amber-600 text-base">40 – 65 tr/m²</span></td>
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center">
-                <span
-                  class="inline-flex items-center gap-1 font-black px-3 py-1 rounded-full text-xs sm:text-sm bg-emerald-50 text-emerald-700 border border-emerald-200">▲
-                  12–16 lần</span>
+                <span class="inline-flex items-center gap-1 font-black px-3 py-1 rounded-full text-xs sm:text-sm bg-emerald-50 text-emerald-700 border border-emerald-200">▲ 12–16 lần</span>
               </td>
             </tr>
-
             <!-- 3. Samsung Yên Phong -->
             <tr class="compare-row border-b border-slate-100 hover:bg-slate-50 transition-colors whitespace-nowrap">
               <td class="px-5 py-4 sm:px-6 sm:py-5">
@@ -1770,8 +1758,193 @@
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center text-slate-600 text-sm">2018 – 2023</td>
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center"><span class="font-black text-amber-600 text-base">60 – 90 tr/m²</span></td>
               <td class="px-5 py-4 sm:px-6 sm:py-5 text-center">
-                <span
-                  class="inline-flex items-center gap-1 font-black px-3 py-1 rounded-full text-xs sm:text-sm bg-emerald-50 text-emerald-700 border border-emerald-200">▲
+                <span class="inline-flex items-center gap-1 font-black px-3 py-1 rounded-full text-xs sm:text-sm bg-emerald-50 text-emerald-700 border border-emerald-200">▲ 12–20 lần</span>
+              </td>
+            </tr>
+            <!-- 4. Samsung Phổ Yên -->
+            <tr class="compare-row border-b border-slate-100 hover:bg-slate-50 transition-colors bg-slate-50/50 whitespace-nowrap">
+              <td class="px-5 py-4 sm:px-6 sm:py-5">
+                <div class="font-bold text-slate-900 text-sm">KCN Samsung Phổ Yên</div>
+                <div class="text-slate-500 text-xs mt-0.5">Phổ Yên, Thái Nguyên · Tổ hợp Samsung SEVT</div>
+              </td>
+              <td class="px-5 py-4 sm:px-6 sm:py-5 text-center text-slate-600 text-sm">2013 – 2015</td>
+              <td class="px-5 py-4 sm:px-6 sm:py-5 text-center"><span class="font-bold text-slate-800">2 – 4.5 tr/m²</span></td>
+              <td class="px-5 py-4 sm:px-6 sm:py-5 text-center text-slate-600 text-sm">2019 – 2024</td>
+              <td class="px-5 py-4 sm:px-6 sm:py-5 text-center"><span class="font-black text-amber-600 text-base">30 – 50 tr/m²</span></td>
+              <td class="px-5 py-4 sm:px-6 sm:py-5 text-center">
+                <span class="inline-flex items-center gap-1 font-black px-3 py-1 rounded-full text-xs sm:text-sm bg-emerald-50 text-emerald-700 border border-emerald-200">▲ 10–14 lần</span>
+              </td>
+            </tr>
+            <!-- 5. KCN Tràng Duệ 3 (highlight) -->
+            <tr class="compare-row bg-amber-50/80 border-2 border-amber-400 whitespace-nowrap">
+              <td class="px-5 py-4 sm:px-6 sm:py-5">
+                <div class="font-black text-amber-900 text-sm flex items-center gap-2">
+                  <i data-lucide="star" class="w-4 h-4 text-amber-600 fill-amber-500"></i>KCN TRÀNG DUỆ 3 (Hiện tại)
+                </div>
+                <div class="text-amber-800 text-xs mt-0.5 font-medium">An Lão, Hải Phòng · 652 ha</div>
+              </td>
+              <td class="px-5 py-4 sm:px-6 sm:py-5 text-center text-amber-900 text-sm font-bold">2025 – 2026 ← BẠN ĐANG Ở ĐÂY</td>
+              <td class="px-5 py-4 sm:px-6 sm:py-5 text-center"><span class="font-black text-amber-700 text-xs sm:text-sm bg-amber-100 px-3 py-1 rounded-full">Giá F0 đợt 1</span></td>
+              <td class="px-5 py-4 sm:px-6 sm:py-5 text-center text-slate-600 text-sm">Dự kiến 2029+</td>
+              <td class="px-5 py-4 sm:px-6 sm:py-5 text-center"><span class="text-amber-800 font-black text-sm sm:text-base">Dự báo x10+</span></td>
+              <td class="px-5 py-4 sm:px-6 sm:py-5 text-center">
+                <a href="#contact-form" class="inline-flex items-center gap-1 font-bold px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs shadow-md transition-all hover:scale-105" style="background:#f59e0b;color:#0a192f">Đầu tư đón sóng →</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== MOBILE: Card dọc (dưới lg) ===== -->
+      <div class="lg:hidden space-y-3 reveal mb-10">
+
+        <!-- Card 1: KCN Tràng Duệ 1 & 2 -->
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+          <div class="flex items-center justify-between px-4 py-3.5 cursor-pointer select-none" onclick="this.parentElement.classList.toggle('kcn-open')" style="background:linear-gradient(90deg,#0a192f,#1a3a5c)">
+            <div>
+              <div class="font-bold text-white text-sm">KCN Tràng Duệ 1 & 2</div>
+              <div class="text-slate-400 text-xs mt-0.5">An Dương, Hải Phòng · Tổ hợp LG</div>
+            </div>
+            <span class="inline-flex items-center gap-1 font-black px-3 py-1 rounded-full text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex-shrink-0">▲ 10–15 lần</span>
+          </div>
+          <div class="kcn-body">
+            <div class="grid grid-cols-3 divide-x divide-slate-100">
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">San lấp</div>
+                <div class="font-bold text-slate-800 text-xs">2013 – 2015</div>
+              </div>
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">Giá ban đầu</div>
+                <div class="font-bold text-slate-800 text-xs">3 – 6 tr/m²</div>
+              </div>
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">Giá đỉnh</div>
+                <div class="font-black text-amber-600 text-sm">45–75 tr/m²</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: KCN VSIP Hải Phòng -->
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+          <div class="flex items-center justify-between px-4 py-3.5 cursor-pointer select-none" onclick="this.parentElement.classList.toggle('kcn-open')" style="background:linear-gradient(90deg,#0a192f,#1a3a5c)">
+            <div>
+              <div class="font-bold text-white text-sm">KCN VSIP Hải Phòng</div>
+              <div class="text-slate-400 text-xs mt-0.5">Thủy Nguyên, HP · 1.600 ha</div>
+            </div>
+            <span class="inline-flex items-center gap-1 font-black px-3 py-1 rounded-full text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex-shrink-0">▲ 12–16 lần</span>
+          </div>
+          <div class="kcn-body">
+            <div class="grid grid-cols-3 divide-x divide-slate-100">
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">San lấp</div>
+                <div class="font-bold text-slate-800 text-xs">2010 – 2013</div>
+              </div>
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">Giá ban đầu</div>
+                <div class="font-bold text-slate-800 text-xs">2.5 – 5 tr/m²</div>
+              </div>
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">Giá đỉnh</div>
+                <div class="font-black text-amber-600 text-sm">40–65 tr/m²</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: KCN Samsung Yên Phong -->
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+          <div class="flex items-center justify-between px-4 py-3.5 cursor-pointer select-none" onclick="this.parentElement.classList.toggle('kcn-open')" style="background:linear-gradient(90deg,#0a192f,#1a3a5c)">
+            <div>
+              <div class="font-bold text-white text-sm">KCN Samsung Yên Phong</div>
+              <div class="text-slate-400 text-xs mt-0.5">Bắc Ninh · Samsung Display</div>
+            </div>
+            <span class="inline-flex items-center gap-1 font-black px-3 py-1 rounded-full text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex-shrink-0">▲ 12–20 lần</span>
+          </div>
+          <div class="kcn-body">
+            <div class="grid grid-cols-3 divide-x divide-slate-100">
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">San lấp</div>
+                <div class="font-bold text-slate-800 text-xs">2011 – 2014</div>
+              </div>
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">Giá ban đầu</div>
+                <div class="font-bold text-slate-800 text-xs">4 – 7 tr/m²</div>
+              </div>
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">Giá đỉnh</div>
+                <div class="font-black text-amber-600 text-sm">60–90 tr/m²</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: KCN Samsung Phổ Yên -->
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+          <div class="flex items-center justify-between px-4 py-3.5 cursor-pointer select-none" onclick="this.parentElement.classList.toggle('kcn-open')" style="background:linear-gradient(90deg,#0a192f,#1a3a5c)">
+            <div>
+              <div class="font-bold text-white text-sm">KCN Samsung Phổ Yên</div>
+              <div class="text-slate-400 text-xs mt-0.5">Thái Nguyên · Samsung SEVT</div>
+            </div>
+            <span class="inline-flex items-center gap-1 font-black px-3 py-1 rounded-full text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex-shrink-0">▲ 10–14 lần</span>
+          </div>
+          <div class="kcn-body">
+            <div class="grid grid-cols-3 divide-x divide-slate-100">
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">San lấp</div>
+                <div class="font-bold text-slate-800 text-xs">2013 – 2015</div>
+              </div>
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">Giá ban đầu</div>
+                <div class="font-bold text-slate-800 text-xs">2 – 4.5 tr/m²</div>
+              </div>
+              <div class="px-3 py-3 text-center">
+                <div class="text-slate-500 text-[10px] font-semibold uppercase tracking-wide mb-1">Giá đỉnh</div>
+                <div class="font-black text-amber-600 text-sm">30–50 tr/m²</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: KCN Tràng Duệ 3 – HIGHLIGHT -->
+        <div class="rounded-2xl overflow-hidden border-2 border-amber-400 shadow-lg" style="background:linear-gradient(135deg,#fffbeb,#fef3c7)">
+          <div class="px-4 py-4">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <div class="font-black text-amber-900 text-sm flex items-center gap-1.5">
+                  <i data-lucide="star" class="w-4 h-4 text-amber-600 fill-amber-500"></i>KCN TRÀNG DUỆ 3
+                </div>
+                <div class="text-amber-700 text-xs font-semibold mt-0.5">An Lão, Hải Phòng · 652 ha</div>
+              </div>
+              <span class="text-[10px] font-black bg-amber-500 text-white px-2.5 py-1 rounded-full shadow">BẠN ĐANG Ở ĐÂY</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 mb-3">
+              <div class="bg-white/70 rounded-xl px-2 py-2.5 text-center border border-amber-200">
+                <div class="text-amber-700 text-[10px] font-bold uppercase tracking-wide mb-1">San lấp</div>
+                <div class="font-black text-amber-900 text-xs">2025 – 2026</div>
+              </div>
+              <div class="bg-white/70 rounded-xl px-2 py-2.5 text-center border border-amber-200">
+                <div class="text-amber-700 text-[10px] font-bold uppercase tracking-wide mb-1">Giá hiện tại</div>
+                <div class="font-black text-amber-700 text-xs">Giá F0 đợt 1</div>
+              </div>
+              <div class="bg-white/70 rounded-xl px-2 py-2.5 text-center border border-amber-200">
+                <div class="text-amber-700 text-[10px] font-bold uppercase tracking-wide mb-1">Dự báo</div>
+                <div class="font-black text-emerald-700 text-sm">x10+</div>
+              </div>
+            </div>
+            <a href="#contact-form" class="flex items-center justify-center gap-2 w-full font-black text-sm py-3 rounded-xl shadow-md transition-all hover:scale-[1.02]" style="background:#f59e0b;color:#0a192f">Đầu tư đón sóng ngay →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <style>
+        /* Mặc định kcn-body luôn hiện (không accordion) */
+        .kcn-body {
+          display: block;
+          border-top: 1px solid #f1f5f9;
+        }
+      </style>
                   12–20 lần</span>
               </td>
             </tr>
